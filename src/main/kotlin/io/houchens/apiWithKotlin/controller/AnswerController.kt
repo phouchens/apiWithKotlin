@@ -1,7 +1,7 @@
 package io.houchens.apiWithKotlin.controller
 
 import io.houchens.apiWithKotlin.Model.Answer
-import io.houchens.apiWithJava.exception.ResourceNotFoundException
+import io.houchens.apiWithKotlin.exception.ResourceNotFoundException
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.DeleteMapping

@@ -1,7 +1,7 @@
-package io.houchens.apiWithJava.controller
+package io.houchens.apiWithKotlin.controller
 
-import io.houchens.apiWithJava.exception.ResourceNotFoundException
 import io.houchens.apiWithKotlin.Model.Question
+import io.houchens.apiWithKotlin.exception.ResourceNotFoundException
 import io.houchens.apiWithKotlin.repository.QuestionRepository
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
@@ -36,7 +36,7 @@ class QuestionController(private val questionRepository: QuestionRepository) {
                     question.title = questionRequest.title
                     question.description = questionRequest.description
                     questionRepository.save(question) }
-            .orElseThrow{ResourceNotFoundException("Question Not Found with question id: " + questionId)}
+            .orElseThrow{ResourceNotFoundException("Question Not Found with question id: $questionId")}
     }
 
     @DeleteMapping("/questions/{questionId}")
@@ -45,6 +45,6 @@ class QuestionController(private val questionRepository: QuestionRepository) {
             .map{ question ->
                     questionRepository.delete(question)
                 ResponseEntity<Void>(HttpStatus.OK) }
-            .orElseThrow{ResourceNotFoundException("Question Not Found with question id: " + questionId)}
+            .orElseThrow{ResourceNotFoundException("Question Not Found with question id: $questionId")}
     }
 }

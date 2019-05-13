@@ -1,4 +1,4 @@
-package io.houchens.apiWithJava.exception
+package io.houchens.apiWithKotlin.exception
 
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.ResponseStatus
