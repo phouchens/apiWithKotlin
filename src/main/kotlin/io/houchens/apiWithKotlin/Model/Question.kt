@@ -1,4 +1,4 @@
-package Model
+package io.houchens.apiWithKotlin.Model
 
 import javax.persistence.Column
 import javax.persistence.Entity

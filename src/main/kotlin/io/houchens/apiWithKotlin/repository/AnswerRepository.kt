@@ -1,6 +1,6 @@
-package repository
+package io.houchens.apiWithKotlin.repository
 
-import Model.Answer
+import io.houchens.apiWithKotlin.Model.Answer
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 

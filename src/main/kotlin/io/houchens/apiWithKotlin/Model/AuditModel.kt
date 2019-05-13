@@ -1,4 +1,4 @@
-package Model
+package io.houchens.apiWithKotlin.Model
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import org.springframework.data.annotation.CreatedDate
