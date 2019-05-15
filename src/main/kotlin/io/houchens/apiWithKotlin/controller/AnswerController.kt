@@ -1,6 +1,6 @@
 package io.houchens.apiWithKotlin.controller
 
-import io.houchens.apiWithKotlin.Model.Answer
+import io.houchens.apiWithKotlin.model.Answer
 import io.houchens.apiWithKotlin.exception.ResourceNotFoundException
 import io.houchens.apiWithKotlin.repository.AnswerRepository
 import io.houchens.apiWithKotlin.repository.QuestionRepository

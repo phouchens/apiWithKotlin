@@ -1,4 +1,4 @@
-package io.houchens.apiWithKotlin.Model
+package io.houchens.apiWithKotlin.model
 
 import com.fasterxml.jackson.annotation.JsonIgnore
 import org.hibernate.annotations.OnDelete

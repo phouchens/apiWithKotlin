@@ -1,6 +1,6 @@
 package io.houchens.apiWithKotlin.controller
 
-import io.houchens.apiWithKotlin.Model.Question
+import io.houchens.apiWithKotlin.model.Question
 import io.houchens.apiWithKotlin.exception.ResourceNotFoundException
 import io.houchens.apiWithKotlin.repository.QuestionRepository
 import org.springframework.data.domain.Page
