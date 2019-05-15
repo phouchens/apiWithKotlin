@@ -1,7 +1,7 @@
 package io.houchens.apiWithKotlin.controller
 
-import io.houchens.apiWithKotlin.model.Answer
 import io.houchens.apiWithKotlin.exception.ResourceNotFoundException
+import io.houchens.apiWithKotlin.model.Answer
 import io.houchens.apiWithKotlin.repository.AnswerRepository
 import io.houchens.apiWithKotlin.repository.QuestionRepository
 import org.springframework.http.HttpStatus
@@ -28,8 +28,8 @@ class AnswerController(
     @PostMapping("/questions/{questionId}/answers")
     fun addAnswer(@PathVariable questionId: Long, @Valid @RequestBody answer: Answer): Answer {
         return questionRepository.findById(questionId)
-            .map { question ->
-                answer.question = question
+            .map {
+                answer.question = it
                 answerRepository.save(answer)
             }.orElseThrow { ResourceNotFoundException("Could not find question.") }
     }
@@ -40,9 +40,9 @@ class AnswerController(
     ): Answer {
         if (!questionRepository.existsById(questionId)) throw ResourceNotFoundException("Could not find question $questionId")
         return answerRepository.findById(answerId)
-            .map { answer ->
-                answer.text = answerRequest.text
-                answerRepository.save(answer)
+            .map {
+                it.text = answerRequest.text
+                answerRepository.save(it)
             }.orElseThrow { ResourceNotFoundException("Could not find answer") }
     }
 
@@ -53,8 +53,8 @@ class AnswerController(
         if (!questionRepository.existsById(questionId)) throw ResourceNotFoundException("Question not found with id $questionId")
 
         return answerRepository.findById(answerId)
-            .map { answer ->
-                answerRepository.delete(answer)
+            .map {
+                answerRepository.delete(it)
                 ResponseEntity<Void>(HttpStatus.OK)
             }
             .orElseThrow { ResourceNotFoundException("Answer not found with id $answerId") }
