@@ -15,4 +15,6 @@ cd apiWithKotlin
 ```
 * navigate to http://localhost:8080/swagger-ui.html 
 
+Start by adding Questions to the database. After the question is added, add an answer. 
+
 
