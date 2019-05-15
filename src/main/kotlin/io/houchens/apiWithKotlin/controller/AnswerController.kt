@@ -20,7 +20,7 @@ class AnswerController(
     private val answerRepository: AnswerRepository,
     private val questionRepository: QuestionRepository
 ) {
-    
+
     @GetMapping("/questions/{questionId}/answers")
     fun getAnswerByQuestionId(@PathVariable questionId: Long): List<Answer> =
         answerRepository.findByQuestionId(questionId)
