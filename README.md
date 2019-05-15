@@ -13,5 +13,6 @@ cd apiWithKotlin
 ```
 ./gradlew bootrun
 ```
-* navigate to http://localhost:8080/spring-security-rest/api/swagger-ui.html to see api
+* navigate to http://localhost:8080/swagger-ui.html 
+
 
