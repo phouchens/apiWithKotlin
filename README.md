@@ -1,8 +1,7 @@
-# apiWithKotlin
-Kotlin Api Spring Hibernate JPA
-
-## To run application
-* Ensure Docker and Docker compose are installed. 
+# Kotlin API
+Spring API built with Kotlin JPA and Hibernate
+### To run application
+* Ensure docker and docker-compose are installed. 
 * run command 
 ```
 docker-compose up
